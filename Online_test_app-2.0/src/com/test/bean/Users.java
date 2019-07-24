@@ -12,9 +12,10 @@ public class Users {
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private Long id;
 	
-	
 	private String email;
 	private String password;
+	
+
 	
 	public Users() {
 		
@@ -46,11 +47,13 @@ public class Users {
 		return password;
 	}
 
-
-
 	public void setPassword(String password) {
 		this.password = password;
 	}
+	
+	
+
+	
 
 	@Override
 	public String toString() {
