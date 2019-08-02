@@ -28,6 +28,7 @@ public class UsersService {
 	public boolean isAuthorised(String email,String pass) {
 		boolean flag=false;
 		String passFromDb = "";
+		
 		List<Users> list=repo.getPasswordByEmail(email);	
 		Iterator<Users> i=list.iterator();
 		if(email.isEmpty() && pass.isEmpty()) {
@@ -39,8 +40,10 @@ public class UsersService {
 				}
 					if(passFromDb.equals(pass)) {
 					flag=true;			
+				}	else {
+					
+					flag=false;
 				}
-			
 		}
 		return flag;
 	}
@@ -55,7 +58,12 @@ public class UsersService {
 		return flag;
 	}
 	public List<Question> questionList(){
+		
+		
 		return (List<Question>) qrepo.findAll();
+		
+
+		 
 		
 	}
 	/*public boolean isCorrectAnswer(Long qid,String op) {

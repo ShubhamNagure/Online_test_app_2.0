@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
+import com.test.bean.Answer;
 import com.test.bean.Question;
 import com.test.bean.Users;
 import com.test.serviceImpl.UsersService;
@@ -59,6 +60,7 @@ public class HomeController {
 
 	@RequestMapping(value="/Question_java")
 	public ModelAndView questionsFormJava() {
+		
 		ModelAndView mav= new ModelAndView("Question");
 		System.out.println("I am here in the controller.questionform");
 		List<Question> listofquestion=service.questionList();
@@ -85,7 +87,7 @@ public class HomeController {
 	}*/
 	
 	@RequestMapping(value="/result")
-	public String resultPage() {
+	public String resultPage(@ModelAttribute("ans") Answer a) {
 		System.out.println("I am here in the controller.questionform");
 	
 	return "result";

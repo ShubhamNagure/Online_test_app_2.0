@@ -10,7 +10,7 @@
 <body >
 	<div align="center">
 	<h1>Login Page</h1>
-		<form action="login" method="get">
+		<form action="login" method="get" >
 		<table  border="0" >
 			<tr bgcolor="transparent">
 				<td>Email:</td>
@@ -22,6 +22,7 @@
 			</tr>
 			<tr><td><input type="submit" value="Login" name="login"></td></tr>
 		</table>
+		<h4>${message}</h4>
 		</form>
 		<h3><a href="new">New registration</a></h3>
 	</div>

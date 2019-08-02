@@ -19,24 +19,59 @@
 					<td>Question</td>
 				</tr>
 				<c:forEach items="${listofquestion}" var="question">
+				<c:if test="${question.qid==1}">
+				
 				<tr>
 					<td>${question.qid}</td>
 					<td>${question.ques}</td>
 					
 				</tr>
-				<tr><td></td>
-					<td><input type="radio" value="option1" name="op">${question.option1}</td>
+				<tr>
+					<td></td>
+					<td><input type="radio" value="${question.option1}" name="ans1">${question.option1}</td>
+					
 				</tr>
-				<tr><td></td>
-					<td><input type="radio" value="option2" name="op">${question.option2}</td>
+				<tr>
+					<td></td>
+					<td><input type="radio" value="${question.option2}" name="ans1">${question.option2}</td>
 				</tr>
-				<tr><td></td>
-					<td><input type="radio" value="option3" name="op">${question.option3}</td>
+				<tr>
+					<td></td>
+					<td><input type="radio" value="${question.option3}" name="ans1">${question.option3}</td>
 				</tr>
-				<tr><td></td>
-					<td><input type="radio" value="option4" name="op">${question.option4}</td>
+				<tr>
+					<td></td>
+					<td><input type="radio" value="${question.option4}" name="ans1">${question.option4}</td>
 				</tr>
+				</c:if>
 				</c:forEach>
+				
+				<c:forEach items="${listofquestion}" var="question">
+					<c:if test="${question.qid==2}">
+				<tr>
+					<td>${question.qid}</td>
+					<td>${question.ques}</td>
+					
+				</tr>
+				<tr>
+					<td></td>
+					<td><input type="radio" value="${question.option1}" name="ans2">${question.option1}</td>
+				</tr>
+				<tr>
+					<td></td>
+					<td><input type="radio" value="${question.option2}" name="ans2">${question.option2}</td>
+				</tr>
+				<tr>
+					<td></td>
+					<td><input type="radio" value="${question.option3}" name="ans2">${question.option3}</td>
+				</tr>
+				<tr>
+					<td></td>
+					<td><input type="radio" value="${question.option4}" name="ans2">${question.option4}</td>
+				</tr>
+				</c:if>
+				</c:forEach>
+				
 				</div>
 			</table>
 			<div align="right">
